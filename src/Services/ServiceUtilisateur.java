@@ -88,6 +88,22 @@ public class ServiceUtilisateur implements IService<Utilisateur>{
 
     @Override
     public Utilisateur get(int id) throws SQLException {
-        return null;
+        Utilisateur utilisateur = null;
+        String req = "SELECT * FROM utilisateur WHERE id = " + id;
+        ResultSet resultSet = ste.executeQuery(req);
+
+
+        if (resultSet.next()) {
+            int Id = resultSet.getInt("id");
+            String nom = resultSet.getString("nom");
+            String prenom = resultSet.getString("prenom");
+            String email = resultSet.getString("email");
+            String password = resultSet.getString("password");
+
+            utilisateur = new Utilisateur(Id, nom, prenom, email, password);
+        }
+
+        return utilisateur;
     }
 }
+

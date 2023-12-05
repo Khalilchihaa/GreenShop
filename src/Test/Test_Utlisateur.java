@@ -5,19 +5,19 @@ import java.util.ArrayList;
 import Entite.Utilisateur.Utilisateur;
 import Services.ServiceUtilisateur;
 
-public class Main {
+public class Test_Utlisateur {
     public static void main(String[] args) {
 
         ServiceUtilisateur ser=new ServiceUtilisateur();
         Utilisateur u1=new Utilisateur("test1","trst","test@gmail.com","aabbcc");
 
-       /* try {
+        try {
             ser.ajouter(u1);
             System.out.println("utilisateur ajouté");
         }catch (SQLException e)
         {
             System.out.println(e);
-        }*/
+        }
         try {
             ser.delete(1);
             System.out.println("utilisateur supprimer");

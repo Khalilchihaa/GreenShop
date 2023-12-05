@@ -2,7 +2,7 @@ package Test;
 import java.sql.SQLException;
 import java.util.ArrayList;
 
-import Entite.Utilisateur;
+import Entite.Utilisateur.Utilisateur;
 import Services.ServiceUtilisateur;
 
 public class Main {

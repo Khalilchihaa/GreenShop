@@ -1,4 +1,4 @@
-package Entite;
+package Entite.Utilisateur;
 
 public class Administrateur {
     int id ;

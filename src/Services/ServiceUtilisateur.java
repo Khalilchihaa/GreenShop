@@ -1,6 +1,6 @@
 package Services;
 
-import Entite.Utilisateur;
+import Entite.Utilisateur.Utilisateur;
 import Utils.DataSource;
 
 import java.sql.Connection;
@@ -49,7 +49,6 @@ public class ServiceUtilisateur implements IService<Utilisateur>{
         int res = ste.executeUpdate(req);
     }
 
-    @Override
         public boolean login(String email, String motDePasse) throws SQLException {
             String req = "SELECT * FROM utilisateur WHERE email = '" + email + "' AND password = '" + motDePasse + "'";
             ResultSet resultSet = ste.executeQuery(req);

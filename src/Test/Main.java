@@ -43,5 +43,14 @@ public class Main {
 
 
         l.forEach(e-> System.out.println(e));
+
+        try {
+            System.out.println(ser.login("test@gmail.com","aabbcc"));
+
+        }catch (SQLException e)
+        {
+            System.out.println(e);
+        }
     }
+
 }

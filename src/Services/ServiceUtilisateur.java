@@ -49,6 +49,14 @@ public class ServiceUtilisateur implements IService<Utilisateur>{
         int res = ste.executeUpdate(req);
     }
 
+    @Override
+        public boolean login(String email, String motDePasse) throws SQLException {
+            String req = "SELECT * FROM utilisateur WHERE email = '" + email + "' AND password = '" + motDePasse + "'";
+            ResultSet resultSet = ste.executeQuery(req);
+
+            return resultSet.next();
+        }
+
 
 
     @Override
@@ -72,6 +80,8 @@ public class ServiceUtilisateur implements IService<Utilisateur>{
         {
             System.out.println(e);
         }
+
+
 
 
        return list;

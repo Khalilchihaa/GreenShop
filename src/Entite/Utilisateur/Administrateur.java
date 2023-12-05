@@ -1,7 +1,10 @@
 package Entite.Utilisateur;
 
-public class Administrateur {
-    int id ;
+public class Administrateur extends Utilisateur{
+    public Administrateur(int id, String nom, String prenom, String email, String password) {
+        super(id, nom, prenom, email,password);
+    }
+    /*int id ;
     String password;
 
     public Administrateur(int id, String password) {
@@ -31,6 +34,6 @@ public class Administrateur {
                 "id=" + id +
                 ", password='" + password + '\'' +
                 '}';
-    }
+    }*/
 
 }
